@@ -2,6 +2,8 @@
 #include <string>
 #include <unordered_map>
 using namespace std;
+// 题目：有效的字母异位词
+//  https://leetcode.cn/problems/valid-anagram/description/?envType=problem-list-v2&envId=hash-table
 namespace CPP
 {
     class Solution
@@ -48,15 +50,25 @@ namespace CPP
             return true;
         }
     };
+    class Solution_second
+    {
+    public:
+        bool isAnagram(string s, string t)
+        {
+            sort(s.begin(), s.end());
+            sort(t.begin(), t.end());
+            return s == t;
+        }
+    };
 }
 int main()
 {
     CPP::Solution solution;
-    pair<string, string> test_data_first  = {"anagram", "nagaram"};
+    pair<string, string> test_data_first = {"anagram", "nagaram"};
     pair<string, string> test_data_second = {"rat", "car"};
-    pair<string, string> test_data_third  = {"aacc", "ccac"};
-    cout << solution.isAnagram(test_data_first.first, test_data_first.second)   << endl;
+    pair<string, string> test_data_third = {"aacc", "ccac"};
+    cout << solution.isAnagram(test_data_first.first, test_data_first.second) << endl;
     cout << solution.isAnagram(test_data_second.first, test_data_second.second) << endl;
-    cout << solution.isAnagram(test_data_third.first, test_data_third.second)   << endl;
+    cout << solution.isAnagram(test_data_third.first, test_data_third.second) << endl;
     return 0;
 }
