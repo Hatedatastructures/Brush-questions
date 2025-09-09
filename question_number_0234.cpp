@@ -3,7 +3,7 @@
 
 using namespace std;
 // 题目：回文链表
-// https://leetcode.cn/problems/palindrome-linked-list/submissions/660906111/
+// https://leetcode.cn/problems/palindrome-linked-list/
 namespace CPP
 {
     struct ListNode
